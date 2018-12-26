@@ -1,50 +1,20 @@
-# VAULT Scanner
+# VAULT
+#### swiss army knife for hackers
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/740204dd950c4e49841c94f2c32af78a)](https://app.codacy.com/app/abhisharma404/vault_scanner?utm_source=github.com&utm_medium=referral&utm_content=abhisharma404/vault_scanner&utm_campaign=Badge_Grade_Dashboard)
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/abhisharma404/vault_scanner) 
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/abhisharma404/vault_scanner)
 [![Join the chat at https://gitter.im/vault_scanner/kwoc](https://badges.gitter.im/vault_scanner/Lobby.svg)](https://gitter.im/vault_scanner/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![Python](https://img.shields.io/badge/python-%3E%3D3-brightgreen.svg)
 ![version](https://img.shields.io/badge/version-0.1.0-yellow.svg)
 
-Vault Scanner can be used for:
+## Table of contents
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Contributing](#contributing)
+- [License](#license)
 
-* Scan a website for the following:
-      - [XSS](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS))
-      - [LFI](https://en.wikipedia.org/wiki/File_inclusion_vulnerability#Local_File_Inclusion)
-      - [RFI](https://en.wikipedia.org/wiki/File_inclusion_vulnerability#Remote_File_Inclusion)
-      - [SQLi](https://en.wikipedia.org/wiki/SQL_injection)
-
-* Common header erros:
-      - Clickjacking
-      - jQuery
-      - Insecure cookie flags
-      - Session fixation through a cookie injection
-      - Spoofing Agents
-      - Brute force login through authorization header
-      - Testing HTTP methods
-      - Insecure headers
-
-* Collecting data:
-      - Port scanning
-      - IP Scanning
-      - Header grabbing
-      - Banner grabbing
-      - Finding comments in source code
-      - Smartwhois scan
-      - Check if error handling is done or not and extract the site data using that information.
-      - OS scanning.
-
-* SSL scanner.
-* Google Dorker
-
-* Crawl a website and collect all the URLs.
-
-* Scrape a website and collect all the images.
-
-* [URL fuzzing](https://en.wikipedia.org/wiki/Fuzzing).
-
-* [Shellshock](https://en.wikipedia.org/wiki/Shellshock_(software_bug)) checking.
-
-# Getting Started
+## Getting Started
 
 Steps to setup :
 
@@ -61,7 +31,67 @@ Starting Vault :
 1. `cd vault_scanner/src`
 2. `python3 vault.py`
 
-# Usage
+## Features
+* #### Scan website for the following vulnerabilities
+- [x] XSS
+- [x] LFI
+- [ ] RFI
+- [ ] SQLi
+
+* #### Scanner
+- [x] Port scanning : ACK, FIN, NULL, XMAS
+- [x] IP scanning : Ping Sweep, ARP
+- [x] SSL vulnerability scan
+- [ ] OS scan
+- [ ] Hash scanner
+
+* #### Others
+- Information Gathering
+  - [x] Clickjacking
+  - [ ] jQuery version checking
+  - [x] Insecure cookie flags
+  - [x] Testing HTTP methods
+  - [x] Insecure headers
+  - [x] Header/banner grabbing
+  - Finder
+    - [x] Find comments in source code
+    - [x] Find e-mails in source code
+- [ ] Session fixation through cookie injection
+- [ ] Brute force login through authorization headers
+- [x] URL Fuzzer
+- [x] WHOIS Lookup
+- [x] Google Dork
+- [ ] Error handler checker
+- [x] Admin panel finder
+- [x] Open redirect vulnerability
+- [ ] CMS Detection
+- [ ] Detect Honeypots
+- [ ] Detect DDoS attack
+- [ ] Detect De-authentication attack
+
+* #### Crawling
+- [x] Crawl a website and collect all the links
+- [x] Crawl and scrape the website for images
+
+* #### Attacks
+- [x] DDoS Attack
+- [ ] ARP Spoofer
+- [ ] DNS Spoofer
+- [ ] De-authentication attack
+- [ ] Network disassociation attack
+- [ ] Ping of death
+- [ ] MAC Flood Attack
+
+* #### Utilities
+- [ ] Generate customized backdoor
+- [ ] Data monitoring
+- [ ] Keylogger
+- [ ] SSH Tunelling
+- [ ] Generate sitemap
+- [ ] MAC address changer
+- [ ] Trace route
+
+## Usage
 
 ```
 usage: vault.py [-h] [-u URL] [-p PORT] [-sp START_PORT] [-ep END_PORT] [-ssl]
@@ -107,10 +137,16 @@ optional arguments:
                         Output all data
 ```
 
-Example Usage :
+Example Usage : `python3 vault.py -u 'http://url' -info -comment -ssl -fuzz`
 
-`python3 vault.py -u 'http://url' -info -comment -ssl -fuzz`
-
-# Screenshot
-
+## Screenshot
 ![](logo/Initial_Setup.png)
+
+## Contributing
+Any and all contributions, issues, features and tips are welcome.
+Please refer to `CONTRIBUTING.md` for more details.
+
+## License
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/abhisharma404/vault_scanner)
+
+### This project is currently a part of IIT KWoC 2018.
